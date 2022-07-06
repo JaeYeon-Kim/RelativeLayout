@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:columnCount="5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/instagramLogo"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/instagram_logo" />
+
+            <ImageView
+                android:id="@+id/spinnerArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/arrow" />
+
+            <ImageView
+                android:id="@+id/gridImage_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/add_box" />
+
+            <ImageView
+                android:id="@+id/gridImage_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/heart_image" />
+
+            <ImageView
+                android:id="@+id/gridImage_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/plane" />
+
+        </GridLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4da0a0a0" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+        <TableRow>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/tableImage1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/kjy1"
+                app:civ_border_color="#DD2A7B"
+                app:civ_border_overlay="true"
+                app:civ_border_width="1dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/tableImage2"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/kjy2"
+                app:civ_border_color="#DD2A7B"
+                app:civ_border_overlay="true"
+                app:civ_border_width="1dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/tableImage3"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/kjy3"
+                app:civ_border_color="#DD2A7B"
+                app:civ_border_overlay="true"
+                app:civ_border_width="1dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSecond"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tableLayout">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4da0a0a0" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/relative_iv"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/kjy1"
+                app:civ_border_color="#DD2A7B"
+                app:civ_border_overlay="true"
+                app:civ_border_width="1dp" />
+
+            <TextView
+                android:id="@+id/relative_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/relative_iv"
+                android:text="rlawodusx"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_menu" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutSecond">
+
+        <ImageView
+            android:id="@+id/frame_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sneaker_image" />
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/bottom_iv_1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/heart_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frameLayout" />
+
+    <ImageView
+        android:id="@+id/bottom_iv_2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/speech_bubble"
+        app:layout_constraintStart_toEndOf="@id/bottom_iv_1"
+        app:layout_constraintTop_toTopOf="@id/bottom_iv_1" />
+
+    <ImageView
+        android:id="@+id/bottom_iv_3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/plane"
+        app:layout_constraintStart_toEndOf="@id/bottom_iv_2"
+        app:layout_constraintTop_toTopOf="@id/bottom_iv_1" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/ic_bottom_button"
+        app:layout_constraintStart_toEndOf="@id/bottom_iv_3"
+        app:layout_constraintTop_toTopOf="@id/bottom_iv_2" />
+
+    <ImageView
+        android:id="@+id/bottom_iv_4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/bookmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottom_iv_2" />
+
+    <TextView
+        android:id="@+id/likeText"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:text="좋아요 476개"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/bottom_iv_1"
+        app:layout_constraintTop_toBottomOf="@id/bottom_iv_1" />
+
+    <TextView
+        android:id="@+id/idText"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:text="rlawodusx"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/bottom_iv_1"
+        app:layout_constraintTop_toBottomOf="@id/likeText" />
+
+    <TextView
+        android:id="@+id/lastText"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="7월 출시 예정인 뉴발란스 신제품 990V2 두 가지 컬러!!..."
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/bottom_iv_1"
+        app:layout_constraintTop_toBottomOf="@id/idText" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
